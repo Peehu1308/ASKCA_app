@@ -11,23 +11,39 @@ from constants.action import ActionEnum
 
 
 load_dotenv()
+api_client = None
 
 def _get_api_client():
-    api_key=os.getenv("API_KEY")
-    api_secret=os.getenv("API_SECRET")
-    # request_id=os.getenv("REQUEST_ID")
-    ini_path=os.getenv("NUVAMA_INI_PATH")
-    
-    if not all([api_key,api_secret,
-                # ini_path
-                ]):
-        raise RuntimeError("Missing env variables")
-    with open("request_id.txt")as f:
-        request_id=f.read().strip()
-    return APIConnect(api_key,api_secret,request_id,
-                           True,
+    global api_client
 
-                           )
+    if api_client:
+        return api_client
+
+    api_key = os.getenv("API_KEY")
+    api_secret = os.getenv("API_SECRET")
+
+    with open("request_id.txt") as f:
+        request_id = f.read().strip()
+
+    api_client = APIConnect(api_key, api_secret, request_id, True)
+    return api_client
+
+# def _get_api_client():
+#     api_key=os.getenv("API_KEY")
+#     api_secret=os.getenv("API_SECRET")
+#     # request_id=os.getenv("REQUEST_ID")
+#     ini_path=os.getenv("NUVAMA_INI_PATH")
+    
+#     if not all([api_key,api_secret,
+#                 # ini_path
+#                 ]):
+#         raise RuntimeError("Missing env variables")
+#     with open("request_id.txt")as f:
+#         request_id=f.read().strip()
+#     return APIConnect(api_key,api_secret,request_id,
+#                            True,
+
+#                            )
 def place_trade(
     symbol,
     exchange,
@@ -40,19 +56,15 @@ def place_trade(
     product_code
 ):
     try:
-        api_connect = _get_api_client()
+        api = _get_api_client()
 
-        print("---- TRADE REQUEST ----")
-        print("Symbol:", symbol)
-        print("Exchange:", exchange)
-        print("Side:", side)
-        print("Qty:", quantity)
-        print("OrderType:", order_type)
-        print("Validity:", validity)
-        print("Price:", limit_price)
-        print("Product:", product_code)
+        print("\n---- TRADE REQUEST ----")
+        print(symbol, exchange, side, quantity, order_type, limit_price)
 
-        response = api_connect.PlaceTrade(
+        if order_type == "LIMIT" and limit_price <= 0:
+            return {"error": "Limit price required for LIMIT order"}
+
+        response = api.PlaceTrade(
             Trading_Symbol=symbol,
             Exchange=ExchangeEnum[exchange],
             Action=ActionEnum[side],
@@ -60,22 +72,34 @@ def place_trade(
             Order_Type=OrderTypeEnum[order_type],
             Quantity=quantity,
             Streaming_Symbol=streaming_symbol,
-            Limit_Price = str(limit_price) if order_type == "LIMIT" else "0",
+            Limit_Price=str(limit_price),
             Disclosed_Quantity="0",
             TriggerPrice="0",
             ProductCode=ProductCodeENum[product_code]
         )
 
         print("---- BROKER RESPONSE ----")
-        print(response)
+        print("RAW:", response)
+        print("LEN:", len(response))
+
+        if not response:
+            return {
+                "error": "Broker returned empty response",
+                "possible_reasons": [
+                    "Session expired",
+                    "Market closed",
+                    "Invalid price",
+                    "Invalid streaming symbol"
+                ]
+            }
 
         return response
 
-    except KeyError as e:
-        return {"error": f"Invalid enum val: {str(e)}"}
+    except SystemExit:
+        return {"error": "Session expired. Re-login required."}
+
     except Exception as e:
         return {"error": str(e)}
-
 
 # def place_trade(
 #     symbol,
