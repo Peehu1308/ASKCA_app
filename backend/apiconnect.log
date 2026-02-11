@@ -1794,3 +1794,109 @@ The server didn't respond in time.
 2026-02-11 14:51:50,575 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "POST /edelmw-eq/eq/trade/placetrade/80218397/ HTTP/1.1" 500 241
 2026-02-11 14:51:50,575 [DEBUG] APIConnect.http: Error response: {"appID":"41da4012486b1acb3578c60f7f4e248a","config":{},"error":{"actCd":"54","errCd":"EOMN0001","errMsg":"Error occurred : Trading Symbol Doesn't exist for the exchange"},"msgID":"2d9f1d30-a074-4832-a256-f633adead1c4","srvTm":1770801712066}
 2026-02-11 14:51:50,576 [DEBUG] APIConnect.APIConnect: Response received: 
+2026-02-11 14:53:55,049 [INFO] APIConnect.APIConnect: Logger initiated with default values.
+2026-02-11 14:53:55,050 [INFO] constants.router: Router object is being created.
+2026-02-11 14:53:55,050 [INFO] APIConnect.http: Http object is being created.
+2026-02-11 14:53:55,050 [INFO] APIConnect.login_helper: LoginHelper object is being created.
+2026-02-11 14:53:55,051 [INFO] APIConnect.APIConnect: User data file found, loading data.
+2026-02-11 14:53:55,187 [INFO] feed.feed: Connection established with subscriber.
+2026-02-11 14:53:56,519 [INFO] APIConnect.login_helper: Downloaded instruments.zip
+2026-02-11 14:53:56,683 [INFO] APIConnect.login_helper: Downloaded mfInstruments.zip
+2026-02-11 14:53:57,064 [INFO] APIConnect.login_helper: Extracted instruments.csv
+2026-02-11 14:54:00,256 [INFO] APIConnect.login_helper: Loaded instruments.csv
+2026-02-11 14:54:00,275 [INFO] APIConnect.login_helper: Extracted mfInstruments.csv
+2026-02-11 14:54:00,470 [INFO] APIConnect.login_helper: Loaded mfInstruments.csv
+2026-02-11 14:54:00,771 [INFO] APIConnect.APIConnect: PlaceTrade method is called.
+2026-02-11 14:54:00,774 [DEBUG] APIConnect.APIConnect: PlaceTrade method is called with data: {'trdSym': 'YESBANK', 'exc': 'NSE', 'action': 'BUY', 'dur': 'DAY', 'ordTyp': 'LIMIT', 'qty': '1', 'dscQty': '0', 'sym': '11536_NSE', 'mktPro': '', 'lmPrc': '25.0', 'trgPrc': '0', 'prdCode': 'CNC', 'posSqr': 'N', 'minQty': '0', 'ordSrc': 'API', 'vnCode': '', 'rmk': '', 'flQty': '0'}
+2026-02-11 14:54:00,779 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): nc.nuvamawealth.com:443
+2026-02-11 14:54:00,964 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "POST /edelmw-eq/eq/trade/placetrade/80218397/ HTTP/1.1" 500 241
+2026-02-11 14:54:00,965 [DEBUG] APIConnect.http: Error response: {"appID":"41da4012486b1acb3578c60f7f4e248a","config":{},"error":{"actCd":"54","errCd":"EOMN0001","errMsg":"Error occurred : Trading Symbol Doesn't exist for the exchange"},"msgID":"136a88d6-1dce-40d7-81f0-4176446c96b2","srvTm":1770801842457}
+2026-02-11 14:54:00,965 [DEBUG] APIConnect.APIConnect: Response received: 
+2026-02-11 14:54:10,399 [INFO] APIConnect.APIConnect: Logger initiated with default values.
+2026-02-11 14:54:10,399 [INFO] constants.router: Router object is being created.
+2026-02-11 14:54:10,399 [INFO] APIConnect.http: Http object is being created.
+2026-02-11 14:54:10,400 [INFO] APIConnect.login_helper: LoginHelper object is being created.
+2026-02-11 14:54:10,400 [INFO] APIConnect.APIConnect: User data file found, loading data.
+2026-02-11 14:54:10,465 [INFO] feed.feed: Connection established with subscriber.
+2026-02-11 14:54:11,594 [INFO] APIConnect.login_helper: Downloaded instruments.zip
+2026-02-11 14:54:11,752 [INFO] APIConnect.login_helper: Downloaded mfInstruments.zip
+2026-02-11 14:54:12,129 [INFO] APIConnect.login_helper: Extracted instruments.csv
+2026-02-11 14:54:15,525 [INFO] APIConnect.login_helper: Loaded instruments.csv
+2026-02-11 14:54:15,583 [INFO] APIConnect.login_helper: Extracted mfInstruments.csv
+2026-02-11 14:54:15,847 [INFO] APIConnect.login_helper: Loaded mfInstruments.csv
+2026-02-11 14:54:16,079 [INFO] APIConnect.APIConnect: OrderBook method is called.
+2026-02-11 14:54:16,080 [DEBUG] APIConnect.APIConnect: OrderBook method is called for 'COMEQ' account type
+2026-02-11 14:54:16,080 [DEBUG] APIConnect.http: Request to url: https://nc.nuvamawealth.com/edelmw-eq/eq/order/book/80218397/v1/
+2026-02-11 14:54:16,083 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): nc.nuvamawealth.com:443
+2026-02-11 14:54:16,253 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "GET /edelmw-eq/eq/order/book/80218397/v1/ HTTP/1.1" 200 None
+2026-02-11 14:54:16,254 [DEBUG] APIConnect.APIConnect: Response for eq: {'appID': '41da4012486b1acb3578c60f7f4e248a', 'config': {'app': 1, 'exp': 1770768020608, 'info': 4}, 'data': {'type': 'orderBookResponse', 'ord': [{'stkPrc': '80000', 'dur': 'EOS', 'vlDt': 'NA', 'rcvTim': '11:24:00', 'rcvEpTim': '11/02/2026 11:24:00', 'sym': '831429_BFO', 'cpName': '', 'exit': 'false', 'syomID': '', 'exc': 'BFO', 'ntQty': '20', 'dpName': 'SENSEX', 'cancel': 'false', 'sipID': 'N', 'nstReqID': '1', 'ordTyp': 'LIMIT', 'opTyp': 'PE', 'trsTyp': 'SELL', 'srs': 'XX', 'prdCode': 'NRML', 'prdDp': 'NRML', 'ogt': '--', 'flQty': '20', 'trdSym': 'SENSEX2621280000PE', 'edit': 'false', 'asTyp': 'OPTIDX', 'trgPrc': '0.00', 'avgPrc': '3.90', 'dsQty': '0', 'ordID': '260211000104601', 'sts': 'complete', 'dpInsTyp': '', 'rjRsn': '', 'userID': '80218397', 'dpExpDt': "12 FEB'26", 'ltSz': '20', 'tkSz': '0.05', 'desc': '20 Sold @ &#8377 3.90', 'prc': '3.90', 'exONo': '1770788685913124402', 'exp': '12Feb2026', 'rcvDt': '11/02/2026', 'pdQty': '0', 'userCmnt': 'NA', 'rmk': 'NA', 'boSeqId': '', 'epochTim': '1770789240427671', 'ordTim': '11/02/2026 11:24:00', 'trgId': '', 'dpVal': 'SENSEX', 'ltp': '4.50', 'bsktOrdId': '', 'bsktEpch': '', 'sipNo': 'NA', 'chg': '-2.25', 'chgP': '-33.33', 'lqdRsn': ''}, {'stkPrc': '82000', 'dur': 'EOS', 'vlDt': 'NA', 'rcvTim': '11:23:36', 'rcvEpTim': '11/02/2026 11:23:36', 'sym': '837399_BFO', 'cpName': '', 'exit': 'false', 'syomID': '', 'exc': 'BFO', 'ntQty': '100', 'dpName': 'SENSEX', 'cancel': 'false', 'sipID': 'N', 'nstReqID': '1', 'ordTyp': 'LIMIT', 'opTyp': 'PE', 'trsTyp': 'BUY', 'srs': 'XX', 'prdCode': 'NRML', 'prdDp': 'NRML', 'ogt': '--', 'flQty': '100', 'trdSym': 'SENSEX2621982000PE', 'edit': 'false', 'asTyp': 'OPTIDX', 'trgPrc': '0.00', 'avgPrc': '43.00', 'dsQty': '0', 'ordID': '260211000104652', 'sts': 'complete', 'dpInsTyp': '', 'rjRsn': '', 'userID': '80218397', 'dpExpDt': "19 FEB'26", 'ltSz': '20', 'tkSz': '0.05', 'desc': '100 Bought @ &#8377 43.00', 'prc': '43.00', 'exONo': '1770788906142101891', 'exp': '19Feb2026', 'rcvDt': '11/02/2026', 'pdQty': '0', 'userCmnt': 'NA', 'rmk': 'NA', 'boSeqId': '', 'epochTim': '1770789216449363', 'ordTim': '11/02/2026 11:23:36', 'trgId': '', 'dpVal': 'SENSEX', 'ltp': '45.00', 'bsktOrdId': '', 'bsktEpch': '', 'sipNo': 'NA', 'chg': '-17.20', 'chgP': '-27.65', 'lqdRsn': ''}]}, 'msgID': 'f5b6b951-59c5-4030-b14b-d02118829e47', 'srvTm': 1770801857683}
+2026-02-11 14:54:16,255 [DEBUG] APIConnect.http: Request to url: https://nc.nuvamawealth.com/edelmw-comm/comm/orderbook/80218397?rTyp=COMFNO/
+2026-02-11 14:54:43,390 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "GET /edelmw-comm/comm/orderbook/80218397?rTyp=COMFNO/ HTTP/1.1" 504 92
+2026-02-11 14:54:43,394 [DEBUG] APIConnect.http: Error response: <html><body><h1>504 Gateway Time-out</h1>
+The server didn't respond in time.
+</body></html>
+
+2026-02-11 14:54:43,395 [DEBUG] APIConnect.APIConnect: Response for comm: 
+2026-02-11 15:00:37,969 [INFO] APIConnect.APIConnect: Logger initiated with default values.
+2026-02-11 15:00:37,970 [INFO] constants.router: Router object is being created.
+2026-02-11 15:00:37,971 [INFO] APIConnect.http: Http object is being created.
+2026-02-11 15:00:37,973 [INFO] APIConnect.login_helper: LoginHelper object is being created.
+2026-02-11 15:00:37,974 [INFO] APIConnect.APIConnect: User data file found, loading data.
+2026-02-11 15:00:38,219 [INFO] feed.feed: Connection established with subscriber.
+2026-02-11 15:00:39,377 [INFO] APIConnect.login_helper: Downloaded instruments.zip
+2026-02-11 15:00:39,511 [INFO] APIConnect.login_helper: Downloaded mfInstruments.zip
+2026-02-11 15:00:40,151 [INFO] APIConnect.login_helper: Extracted instruments.csv
+2026-02-11 15:00:41,573 [INFO] APIConnect.login_helper: Loaded instruments.csv
+2026-02-11 15:00:41,615 [INFO] APIConnect.login_helper: Extracted mfInstruments.csv
+2026-02-11 15:00:41,712 [INFO] APIConnect.login_helper: Loaded mfInstruments.csv
+2026-02-11 15:00:52,661 [INFO] APIConnect.APIConnect: PlaceTrade method is called.
+2026-02-11 15:00:52,661 [DEBUG] APIConnect.APIConnect: PlaceTrade method is called with data: {'trdSym': 'YESBANK', 'exc': 'NSE', 'action': 'BUY', 'dur': 'DAY', 'ordTyp': 'MARKET', 'qty': '1', 'dscQty': '0', 'sym': '11536_NSE', 'mktPro': '', 'lmPrc': '0.0', 'trgPrc': '0', 'prdCode': 'CNC', 'posSqr': 'N', 'minQty': '0', 'ordSrc': 'API', 'vnCode': '', 'rmk': '', 'flQty': '0'}
+2026-02-11 15:00:52,669 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): nc.nuvamawealth.com:443
+2026-02-11 15:00:52,954 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "POST /edelmw-eq/eq/trade/placetrade/80218397/ HTTP/1.1" 500 241
+2026-02-11 15:00:52,955 [DEBUG] APIConnect.http: Error response: {"appID":"41da4012486b1acb3578c60f7f4e248a","config":{},"error":{"actCd":"54","errCd":"EOMN0001","errMsg":"Error occurred : Trading Symbol Doesn't exist for the exchange"},"msgID":"08a3c55a-b1b3-4dc3-822a-abc33f7ed6ec","srvTm":1770802254427}
+2026-02-11 15:00:52,955 [DEBUG] APIConnect.APIConnect: Response received: 
+2026-02-11 15:01:18,345 [INFO] APIConnect.APIConnect: Logger initiated with default values.
+2026-02-11 15:01:18,346 [INFO] constants.router: Router object is being created.
+2026-02-11 15:01:18,346 [INFO] APIConnect.http: Http object is being created.
+2026-02-11 15:01:18,347 [INFO] APIConnect.login_helper: LoginHelper object is being created.
+2026-02-11 15:01:18,347 [INFO] APIConnect.APIConnect: User data file found, loading data.
+2026-02-11 15:01:18,429 [INFO] feed.feed: Connection established with subscriber.
+2026-02-11 15:01:19,283 [INFO] APIConnect.login_helper: Downloaded instruments.zip
+2026-02-11 15:01:19,500 [INFO] APIConnect.login_helper: Downloaded mfInstruments.zip
+2026-02-11 15:01:19,721 [INFO] APIConnect.login_helper: Extracted instruments.csv
+2026-02-11 15:01:22,223 [INFO] APIConnect.login_helper: Loaded instruments.csv
+2026-02-11 15:01:22,286 [INFO] APIConnect.login_helper: Extracted mfInstruments.csv
+2026-02-11 15:01:22,464 [INFO] APIConnect.login_helper: Loaded mfInstruments.csv
+2026-02-11 15:01:24,760 [INFO] APIConnect.APIConnect: PlaceTrade method is called.
+2026-02-11 15:01:24,760 [DEBUG] APIConnect.APIConnect: PlaceTrade method is called with data: {'trdSym': 'YESBANK', 'exc': 'NSE', 'action': 'BUY', 'dur': 'DAY', 'ordTyp': 'MARKET', 'qty': '1', 'dscQty': '0', 'sym': '11536_NSE', 'mktPro': '', 'lmPrc': '0.0', 'trgPrc': '0', 'prdCode': 'CNC', 'posSqr': 'N', 'minQty': '0', 'ordSrc': 'API', 'vnCode': '', 'rmk': '', 'flQty': '0'}
+2026-02-11 15:01:24,765 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): nc.nuvamawealth.com:443
+2026-02-11 15:01:24,912 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "POST /edelmw-eq/eq/trade/placetrade/80218397/ HTTP/1.1" 500 241
+2026-02-11 15:01:24,913 [DEBUG] APIConnect.http: Error response: {"appID":"41da4012486b1acb3578c60f7f4e248a","config":{},"error":{"actCd":"54","errCd":"EOMN0001","errMsg":"Error occurred : Trading Symbol Doesn't exist for the exchange"},"msgID":"899d1586-5e4a-41b8-b26d-f23427b28310","srvTm":1770802286406}
+2026-02-11 15:01:24,913 [DEBUG] APIConnect.APIConnect: Response received: 
+2026-02-11 15:01:37,647 [INFO] APIConnect.APIConnect: OrderBook method is called.
+2026-02-11 15:01:37,647 [DEBUG] APIConnect.APIConnect: OrderBook method is called for 'COMEQ' account type
+2026-02-11 15:01:37,648 [DEBUG] APIConnect.http: Request to url: https://nc.nuvamawealth.com/edelmw-eq/eq/order/book/80218397/v1/
+2026-02-11 15:01:37,775 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "GET /edelmw-eq/eq/order/book/80218397/v1/ HTTP/1.1" 200 None
+2026-02-11 15:01:37,777 [DEBUG] APIConnect.APIConnect: Response for eq: {'appID': '41da4012486b1acb3578c60f7f4e248a', 'config': {'app': 1, 'exp': 1770768020608, 'info': 4}, 'data': {'type': 'orderBookResponse', 'ord': [{'stkPrc': '80000', 'dur': 'EOS', 'vlDt': 'NA', 'rcvTim': '11:24:00', 'rcvEpTim': '11/02/2026 11:24:00', 'sym': '831429_BFO', 'cpName': '', 'exit': 'false', 'syomID': '', 'exc': 'BFO', 'ntQty': '20', 'dpName': 'SENSEX', 'cancel': 'false', 'sipID': 'N', 'nstReqID': '1', 'ordTyp': 'LIMIT', 'opTyp': 'PE', 'trsTyp': 'SELL', 'srs': 'XX', 'prdCode': 'NRML', 'prdDp': 'NRML', 'ogt': '--', 'flQty': '20', 'trdSym': 'SENSEX2621280000PE', 'edit': 'false', 'asTyp': 'OPTIDX', 'trgPrc': '0.00', 'avgPrc': '3.90', 'dsQty': '0', 'ordID': '260211000104601', 'sts': 'complete', 'dpInsTyp': '', 'rjRsn': '', 'userID': '80218397', 'dpExpDt': "12 FEB'26", 'ltSz': '20', 'tkSz': '0.05', 'desc': '20 Sold @ &#8377 3.90', 'prc': '3.90', 'exONo': '1770788685913124402', 'exp': '12Feb2026', 'rcvDt': '11/02/2026', 'pdQty': '0', 'userCmnt': 'NA', 'rmk': 'NA', 'boSeqId': '', 'epochTim': '1770789240427671', 'ordTim': '11/02/2026 11:24:00', 'trgId': '', 'dpVal': 'SENSEX', 'ltp': '4.35', 'bsktOrdId': '', 'bsktEpch': '', 'sipNo': 'NA', 'chg': '-2.40', 'chgP': '-35.56', 'lqdRsn': ''}, {'stkPrc': '82000', 'dur': 'EOS', 'vlDt': 'NA', 'rcvTim': '11:23:36', 'rcvEpTim': '11/02/2026 11:23:36', 'sym': '837399_BFO', 'cpName': '', 'exit': 'false', 'syomID': '', 'exc': 'BFO', 'ntQty': '100', 'dpName': 'SENSEX', 'cancel': 'false', 'sipID': 'N', 'nstReqID': '1', 'ordTyp': 'LIMIT', 'opTyp': 'PE', 'trsTyp': 'BUY', 'srs': 'XX', 'prdCode': 'NRML', 'prdDp': 'NRML', 'ogt': '--', 'flQty': '100', 'trdSym': 'SENSEX2621982000PE', 'edit': 'false', 'asTyp': 'OPTIDX', 'trgPrc': '0.00', 'avgPrc': '43.00', 'dsQty': '0', 'ordID': '260211000104652', 'sts': 'complete', 'dpInsTyp': '', 'rjRsn': '', 'userID': '80218397', 'dpExpDt': "19 FEB'26", 'ltSz': '20', 'tkSz': '0.05', 'desc': '100 Bought @ &#8377 43.00', 'prc': '43.00', 'exONo': '1770788906142101891', 'exp': '19Feb2026', 'rcvDt': '11/02/2026', 'pdQty': '0', 'userCmnt': 'NA', 'rmk': 'NA', 'boSeqId': '', 'epochTim': '1770789216449363', 'ordTim': '11/02/2026 11:23:36', 'trgId': '', 'dpVal': 'SENSEX', 'ltp': '46.15', 'bsktOrdId': '', 'bsktEpch': '', 'sipNo': 'NA', 'chg': '-16.05', 'chgP': '-25.80', 'lqdRsn': ''}]}, 'msgID': '8a351807-82a9-4de0-8201-207eb1a189d8', 'srvTm': 1770802299264}
+2026-02-11 15:01:37,777 [DEBUG] APIConnect.http: Request to url: https://nc.nuvamawealth.com/edelmw-comm/comm/orderbook/80218397?rTyp=COMFNO/
+2026-02-11 15:01:38,213 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "GET /edelmw-comm/comm/orderbook/80218397?rTyp=COMFNO/ HTTP/1.1" 500 221
+2026-02-11 15:01:38,215 [DEBUG] APIConnect.http: Error response: {"appID":"41da4012486b1acb3578c60f7f4e248a","config":{},"error":{"actCd":"50","errCd":"EGN0001","errMsg":"Something went wrong please try again later"},"msgID":"9154dbdb-6869-489d-963d-f791e86ec98b","srvTm":1770802299656}
+2026-02-11 15:01:38,215 [DEBUG] APIConnect.APIConnect: Response for comm: 
+2026-02-11 15:02:16,742 [INFO] APIConnect.APIConnect: PlaceTrade method is called.
+2026-02-11 15:02:16,743 [DEBUG] APIConnect.APIConnect: PlaceTrade method is called with data: {'trdSym': 'YESBANK', 'exc': 'NSE', 'action': 'BUY', 'dur': 'DAY', 'ordTyp': 'MARKET', 'qty': '10', 'dscQty': '0', 'sym': '11536_NSE', 'mktPro': '', 'lmPrc': '0.0', 'trgPrc': '0', 'prdCode': 'CNC', 'posSqr': 'N', 'minQty': '0', 'ordSrc': 'API', 'vnCode': '', 'rmk': '', 'flQty': '0'}
+2026-02-11 15:02:16,855 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "POST /edelmw-eq/eq/trade/placetrade/80218397/ HTTP/1.1" 500 241
+2026-02-11 15:02:16,856 [DEBUG] APIConnect.http: Error response: {"appID":"41da4012486b1acb3578c60f7f4e248a","config":{},"error":{"actCd":"54","errCd":"EOMN0001","errMsg":"Error occurred : Trading Symbol Doesn't exist for the exchange"},"msgID":"febd13aa-88be-4afe-8a44-406ed76a5c32","srvTm":1770802338335}
+2026-02-11 15:02:16,856 [DEBUG] APIConnect.APIConnect: Response received: 
+2026-02-11 15:02:56,721 [INFO] APIConnect.APIConnect: PlaceTrade method is called.
+2026-02-11 15:02:56,722 [DEBUG] APIConnect.APIConnect: PlaceTrade method is called with data: {'trdSym': 'YESBANK-EQ', 'exc': 'NSE', 'action': 'BUY', 'dur': 'DAY', 'ordTyp': 'LIMIT', 'qty': '10', 'dscQty': '0', 'sym': '11536_NSE', 'mktPro': '', 'lmPrc': '25.0', 'trgPrc': '0', 'prdCode': 'NRML', 'posSqr': 'N', 'minQty': '0', 'ordSrc': 'API', 'vnCode': '', 'rmk': '', 'flQty': '0'}
+2026-02-11 15:02:56,784 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "POST /edelmw-eq/eq/trade/placetrade/80218397/ HTTP/1.1" 200 None
+2026-02-11 15:02:56,785 [DEBUG] APIConnect.APIConnect: Response received: {'appID': '41da4012486b1acb3578c60f7f4e248a', 'config': {'app': 1, 'exp': 1770768020608, 'info': 4}, 'data': {'type': 'placeTradeDao', 'msg': 'Your order has been placed succesfully!.', 'oid': '260211000177937'}, 'msgID': 'a764bfaf-fc6d-4c0f-84bc-865c5cefd5c9', 'srvTm': 1770802378268}
+2026-02-11 15:03:11,223 [INFO] APIConnect.APIConnect: OrderBook method is called.
+2026-02-11 15:03:11,223 [DEBUG] APIConnect.APIConnect: OrderBook method is called for 'COMEQ' account type
+2026-02-11 15:03:11,224 [DEBUG] APIConnect.http: Request to url: https://nc.nuvamawealth.com/edelmw-eq/eq/order/book/80218397/v1/
+2026-02-11 15:03:11,285 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "GET /edelmw-eq/eq/order/book/80218397/v1/ HTTP/1.1" 200 None
+2026-02-11 15:03:11,287 [DEBUG] APIConnect.APIConnect: Response for eq: {'appID': '41da4012486b1acb3578c60f7f4e248a', 'config': {'app': 1, 'exp': 1770768020608, 'info': 4}, 'data': {'type': 'orderBookResponse', 'ord': [{'stkPrc': '', 'dur': 'DAY', 'vlDt': 'NA', 'rcvTim': '15:02:58', 'rcvEpTim': '11/02/2026 15:02:58', 'sym': '11915_NSE', 'cpName': 'Yes Bank Limited', 'exit': 'false', 'syomID': '', 'exc': 'NSE', 'ntQty': '10', 'dpName': 'YESBANK', 'cancel': 'false', 'sipID': 'N', 'nstReqID': '1', 'ordTyp': 'LIMIT', 'opTyp': '', 'trsTyp': 'BUY', 'srs': 'EQ', 'prdCode': 'NRML', 'prdDp': 'NRML', 'ogt': '--', 'flQty': '0', 'trdSym': 'INE528G01035', 'edit': 'false', 'asTyp': 'EQUITY', 'trgPrc': '0.00', 'avgPrc': '0.00', 'dsQty': '0', 'ordID': '260211000177937', 'sts': 'rejected', 'dpInsTyp': '', 'rjRsn': 'RMS:Rule: Check circuit limit including square off order exceeds : Circuit breach; Order Price :25.00;  Low Price Range:19.26 High Price Range:23.54  for entity account-80218397 across exchange across segment across product ', 'userID': '80218397', 'dpExpDt': '', 'ltSz': '1', 'tkSz': '0.01', 'desc': 'Buy 10 Qty @ &#8377 25.00', 'prc': '25.00', 'exONo': 'NA', 'rcvDt': '11/02/2026', 'pdQty': '0', 'userCmnt': 'NA', 'rmk': '', 'boSeqId': '', 'epochTim': '1770802378268217', 'ordTim': '11/02/2026 15:02:58', 'trgId': '', 'dpVal': 'YESBANK', 'cta': '', 'ltp': '21.33', 'bsktOrdId': '', 'bsktEpch': '', 'sipNo': 'NA', 'chg': '-0.07', 'chgP': '-0.33', 'lqdRsn': ''}, {'stkPrc': '80000', 'dur': 'EOS', 'vlDt': 'NA', 'rcvTim': '11:24:00', 'rcvEpTim': '11/02/2026 11:24:00', 'sym': '831429_BFO', 'cpName': '', 'exit': 'false', 'syomID': '', 'exc': 'BFO', 'ntQty': '20', 'dpName': 'SENSEX', 'cancel': 'false', 'sipID': 'N', 'nstReqID': '1', 'ordTyp': 'LIMIT', 'opTyp': 'PE', 'trsTyp': 'SELL', 'srs': 'XX', 'prdCode': 'NRML', 'prdDp': 'NRML', 'ogt': '--', 'flQty': '20', 'trdSym': 'SENSEX2621280000PE', 'edit': 'false', 'asTyp': 'OPTIDX', 'trgPrc': '0.00', 'avgPrc': '3.90', 'dsQty': '0', 'ordID': '260211000104601', 'sts': 'complete', 'dpInsTyp': '', 'rjRsn': '', 'userID': '80218397', 'dpExpDt': "12 FEB'26", 'ltSz': '20', 'tkSz': '0.05', 'desc': '20 Sold @ &#8377 3.90', 'prc': '3.90', 'exONo': '1770788685913124402', 'exp': '12Feb2026', 'rcvDt': '11/02/2026', 'pdQty': '0', 'userCmnt': 'NA', 'rmk': 'NA', 'boSeqId': '', 'epochTim': '1770789240427671', 'ordTim': '11/02/2026 11:24:00', 'trgId': '', 'dpVal': 'SENSEX', 'ltp': '4.15', 'bsktOrdId': '', 'bsktEpch': '', 'sipNo': 'NA', 'chg': '-2.60', 'chgP': '-38.52', 'lqdRsn': ''}, {'stkPrc': '82000', 'dur': 'EOS', 'vlDt': 'NA', 'rcvTim': '11:23:36', 'rcvEpTim': '11/02/2026 11:23:36', 'sym': '837399_BFO', 'cpName': '', 'exit': 'false', 'syomID': '', 'exc': 'BFO', 'ntQty': '100', 'dpName': 'SENSEX', 'cancel': 'false', 'sipID': 'N', 'nstReqID': '1', 'ordTyp': 'LIMIT', 'opTyp': 'PE', 'trsTyp': 'BUY', 'srs': 'XX', 'prdCode': 'NRML', 'prdDp': 'NRML', 'ogt': '--', 'flQty': '100', 'trdSym': 'SENSEX2621982000PE', 'edit': 'false', 'asTyp': 'OPTIDX', 'trgPrc': '0.00', 'avgPrc': '43.00', 'dsQty': '0', 'ordID': '260211000104652', 'sts': 'complete', 'dpInsTyp': '', 'rjRsn': '', 'userID': '80218397', 'dpExpDt': "19 FEB'26", 'ltSz': '20', 'tkSz': '0.05', 'desc': '100 Bought @ &#8377 43.00', 'prc': '43.00', 'exONo': '1770788906142101891', 'exp': '19Feb2026', 'rcvDt': '11/02/2026', 'pdQty': '0', 'userCmnt': 'NA', 'rmk': 'NA', 'boSeqId': '', 'epochTim': '1770789216449363', 'ordTim': '11/02/2026 11:23:36', 'trgId': '', 'dpVal': 'SENSEX', 'ltp': '46.65', 'bsktOrdId': '', 'bsktEpch': '', 'sipNo': 'NA', 'chg': '-15.55', 'chgP': '-25.00', 'lqdRsn': ''}]}, 'msgID': '6ed70a14-005c-43b5-bdcd-70add48f3560', 'srvTm': 1770802392768}
+2026-02-11 15:03:11,287 [DEBUG] APIConnect.http: Request to url: https://nc.nuvamawealth.com/edelmw-comm/comm/orderbook/80218397?rTyp=COMFNO/
+2026-02-11 15:03:11,704 [DEBUG] urllib3.connectionpool: https://nc.nuvamawealth.com:443 "GET /edelmw-comm/comm/orderbook/80218397?rTyp=COMFNO/ HTTP/1.1" 500 221
+2026-02-11 15:03:11,705 [DEBUG] APIConnect.http: Error response: {"appID":"41da4012486b1acb3578c60f7f4e248a","config":{},"error":{"actCd":"50","errCd":"EGN0001","errMsg":"Something went wrong please try again later"},"msgID":"025af57f-5dd4-492a-b008-d17749659dc7","srvTm":1770802393152}
+2026-02-11 15:03:11,705 [DEBUG] APIConnect.APIConnect: Response for comm: 
