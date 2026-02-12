@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/StockOrder.dart';
-import 'package:frontend/OrderDetailScreen.dart';
-import 'package:frontend/OrderScreen.dart';
-import 'package:frontend/PLReportScreen.dart';
-import 'package:frontend/StockReport.dart';
+import 'package:frontend/HomeScreen1.dart';
+import 'package:frontend/Screens/StockOrder.dart';
+import 'package:frontend/Screens/OrderDetailScreen.dart';
+import 'package:frontend/Screens/OrderScreen.dart';
+import 'package:frontend/Screens/PLReportScreen.dart';
+import 'package:frontend/Screens/StockReport.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,11 +37,12 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      // home: Homescreen()
+      // home: HomeScreenV1()
       // home:OrderDetailsScreen()
+      home:StockOrder()
       // home:OrdersScreen()
       // home:StocksReportsScreen()
-      home:OrderDetailsScreen()
+      // home:OrderDetailsScreen()
     );
   }
 }
